@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGITAL_WORK_LAB_2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #F2E7D5; --red: #B22222; --gold: #E9C46A; --dark: #264653; --accent: #2A9D8F;
+        }
+
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+        body { margin: 0; padding: 0; background-color: var(--bg); color: var(--dark); font-family: 'Space Mono', monospace; display: flex; height: 100vh; overflow: hidden; }
+
+        /* SIDEBAR NAV */
+        nav { width: 320px; background-color: var(--dark); color: var(--bg); padding: 30px; display: flex; flex-direction: column; border-right: 8px solid var(--red); }
+        .log-header h2 { font-size: 1.1rem; margin: 0; color: var(--gold); border-bottom: 1px solid var(--gold); padding-bottom: 10px; margin-bottom: 20px;}
+        
+        .task-list { list-style: none; padding: 0; flex-grow: 1; overflow-y: auto; }
+        .task-link { color: var(--bg); text-decoration: none; font-size: 0.75rem; display: block; padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); transition: 0.3s; opacity: 0.6; }
+        .task-link:hover { opacity: 1; color: var(--gold); background: rgba(255,255,255,0.05); }
+        .active-link { opacity: 1; color: var(--gold); border-left: 4px solid var(--gold); background: rgba(255,255,255,0.05); }
+
+        /* MAIN CONTENT */
+        main { flex-grow: 1; overflow-y: scroll; padding: 5vw 10vw; position: relative; }
+        
+        section { min-height: 90vh; padding-top: 50px; border-bottom: 2px solid rgba(38, 70, 83, 0.1); margin-bottom: 100px; }
+        
+        h1.main-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 4rem); color: var(--red); margin: 0; }
+        h2.task-title { background: var(--dark); color: white; display: inline-block; padding: 5px 15px; text-transform: uppercase; font-size: 1rem; margin-bottom: 30px; }
+        
+        /* CONTENT BLOCKS */
+        .content-card { background: rgba(255,255,255,0.4); border: 1px solid var(--dark); padding: 40px; margin-top: 20px; position: relative; box-shadow: 10px 10px 0px var(--gold); }
+        .reflection-box { margin-top: 40px; border-left: 5px solid var(--accent); padding: 20px; background: rgba(42, 157, 143, 0.05); font-style: italic; font-size: 0.9rem; }
+        .reflection-box::before { content: "REFLECTIVE_NOTE:"; display: block; font-weight: bold; color: var(--accent); margin-bottom: 10px; font-style: normal; }
+
+        /* PLACEHOLDERS */
+        .visual-placeholder { width: 100%; height: 300px; background: #ddd; border: 2px dashed var(--dark); display: flex; align-items: center; justify-content: center; margin: 20px 0; }
+        
+        /* SCROLLBAR */
+        main::-webkit-scrollbar { width: 8px; }
+        main::-webkit-scrollbar-thumb { background: var(--red); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="log-header">
+            <h2>RESEARCH_LOG_26</h2>
+            <p style="font-size:0.6rem">USER: [MARQUIS ORCHARD] // LEVEL 6</p>
+        </div>
+        <div class="task-list">
+            <a href="#home" class="task-link active-link">00_INDEX</a>
+            <a href="#task1" class="task-link">01_VISUAL_RESEARCH</a>
+            <a href="#task2" class="task-link">02_STATEMENT_OF_INTENT</a>
+            <a href="#task3" class="task-link">03_GEOEPISTEMOLOGY</a>
+            <a href="#task4" class="task-link">04_ARE_ROBOTS_RACIST</a>
+            <a href="#task5" class="task-link">05_DATA_PORTRAITS</a>
+            <a href="#task6" class="task-link">06_PRODUCTION_PLAN</a>
+            <a href="#task7" class="task-link">07_AUDIO</a>
+            <a href="#task8" class="task-link">08_VISUALS</a>
+            <a href="#task9" class="task-link">09_PROTOTYPES</a>
+            <a href="#task10" class="task-link">10_REVIEW_DOCS</a>
+            <a href="#task11" class="task-link">11_FINAL_DELIVERABLES</a>
+        </div>
+    </nav>
+
+   <main id="scroll-container">
+        
+        <section id="home">
+            <h1 class="main-title">What is Work in a Digital World?</h1>
+            <p>An exploration of technology, colonialism, and ethical design.</p>
+            <div class="content-card">
+                <p>> STATUS: Research Phase Initiated</p>
+                <p>> THEME: Critical Web/UX Analysis</p>
+                <p>Scroll to begin the journey through 11 layers of digital enquiry.</p>
+            </div>
+        </section>
+
+        <section id="task1">
+            <h2 class="task-title">01 // Visual Research</h2>
+            <div class="content-card">
+                <p>
+                    My visual research investigates the tension between <strong>human-centric data visualization</strong> and <strong>automated algorithmic surveillance</strong>. By juxtaposing W.E.B. Du Bois’s hand-drawn data portraits with modern facial-mesh grids, I am questioning the neutrality of the digital gaze.
+                </p>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px;">
+                    
+                    <div style="background: white; padding: 10px; border: 1px solid var(--dark); text-align: center;">
+                        <img src="../marquisblog/Props/image1.webp" alt="Du Bois Data Portrait" style="width:100%; height:200px; object-fit:cover;">
+                        <p style="font-size:0.65rem; margin-top:10px; line-height:1.2;">
+                            <strong>Figure 1:</strong> Du Bois (1900) uses the spiral to represent the non-linear struggle of Black life, creating what Battle-Baptiste and Rusert (2018) call a visualizing of liberation.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 10px; border: 1px solid var(--dark); text-align: center;">
+                        <img src="../marquisblog/Props/image2.gif" alt="Facial recognition mesh" style="width:100%; height:200px; object-fit:cover;">
+                        <p style="font-size:0.65rem; margin-top:10px; line-height:1.2;">
+                            <strong>Figure 2:</strong> Facial landmark detection. This represents <strong>Rankin’s (2016)</strong> coordination—the process of turning a biological face into a governable digital territory.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 10px; border: 1px solid var(--dark); text-align: center;">
+                        <img src="../marquisblog/Props/image3.webp" alt="AI Bias Evidence" style="width:100%; height:200px; object-fit:cover;">
+                        <p style="font-size:0.65rem; margin-top:10px; line-height:1.2;">
+                            <strong>Figure 3:</strong> Algorithmic mis-seeing. This exemplifies <strong>Benjamin's (2019)</strong> Coded Inequity, where the lack of diverse training data results in digital erasure.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 10px; border: 1px solid var(--dark); text-align: center;">
+                        <img src="../marquisblog/Props/image4.webp" alt="Skin Tone Scale" style="width:100%; height:200px; object-fit:cover;">
+                        <p style="font-size:0.65rem; margin-top:10px; line-height:1.2;">
+                            <strong>Figure 4:</strong> The Monk Skin Tone (MST) Scale. An attempt to quantify diversity, which often fails to capture the subjective nature of identity.
+                        </p>
+                    </div>
+
+                </div>
+
+                <p style="font-size: 0.85rem; line-height: 1.6; margin-top: 25px; color: #333;">
+                    The juxtaposition of these figures represents a genealogy of the gaze. While Du Bois (Fig 1) utilized data visualization as a tool for political visibility, modern facial landmark detection (Fig 2) often functions as a tool for digital enclosure. My research suggests that Visualizing is a form of work that can either liberate or govern. In Figure 3 and 4, the mis-seeing of the algorithm is not a technical failure, but a historical carryover of the Eurocentric Default. By analyzing these visual artifacts, I am preparing my production phase to use Glitch Aesthetics as a method of making this invisible bias visible to the casual user.
+                </p>
+
+                <div class="reflection-box">
+                    I am analyzing how these images represent a shift in work. In 1900, Du Bois worked manually to reveal humanity; in 2026, the work is performed by algorithms that often hide it. I am using the <strong>aesthetic of the spiral (Fig 1)</strong> to visually disrupt the <strong>rigidity of the grid (Fig 2)</strong> in my final video.
+                </div>
+            </div>
+        </section>
+
+        <section id="task2">
+    <h2 class="task-title">02 // Statement of Intent</h2>
+    <div class="content-card">
+        <p>
+            My project, <strong>The Digital Mirror: Decolonizing the Algorithmic Gaze,</strong> critiques the ethical dimensions of facial modification in modern UX design. 
+            Applying <strong>Ruha Benjamin’s (2019)</strong> argument that "automation can hide, speed up, and even deepen discrimination while appearing neutral," 
+            I am investigating how the <strong>New Jim Code</strong> is embedded into the social media interface.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0;">
+            <div style="background: rgba(255,255,255,0.1); padding: 15px; border: 1px solid var(--accent);">
+                <h4 style="margin-top:0; color:var(--accent); font-size: 0.9rem;">Organisation & Planning</h4>
+                <p style="font-size: 0.75rem; line-height: 1.4;">
+                    My workflow follows <strong>industry-standard Agile practices</strong>, utilizing <strong>Trello</strong> to manage the transition from theoretical research to technical execution. This structured planning ensures that the immaterial labor of coding is balanced against strict production deadlines.
+                </p>
+            </div>
+            <div style="background: rgba(255,255,255,0.1); padding: 15px; border: 1px solid var(--red);">
+                <h4 style="margin-top:0; color:var(--red); font-size: 0.9rem;">Citizenship & Awareness</h4>
+                <p style="font-size: 0.75rem; line-height: 1.4;">
+                    By identifying tracking failures on diverse skin tones, this work acts as a <strong>critical intervention</strong> for a digital-native community. It provides a usable framework for <strong>UX practitioners</strong> to move toward Inclusive Sight (Rankin, 2016).
+                </p>
+            </div>
+        </div>
+
+        <h3 style="font-size: 1rem; color: var(--gold);">Aims for a First-Class Outcome:</h3>
+        <ul style="font-size: 0.85rem; line-height: 1.6;">
+            <li><strong>Critical Synthesis:</strong> Link the cartographic theories of <strong>Rankin (2016)</strong> to the biological mapping of the face.</li>
+            <li><strong>Technical Provocation:</strong> Use glitch aesthetics as an <strong>Abolitionist Tool</strong> (Benjamin, 2019) to expose biased code.</li>
+            <li><strong>Technical Iteration:</strong> Use <strong>Figma</strong> to prototype an interface that resists Eurocentric defaults.</li>
+        </ul>
+
+        <div class="reflection-box">
+            This project is not just a video; it is a critical intervention. I am moving beyond simple "AI is bad" narratives to specifically analyze how <strong>Digital Work</strong>—the processing of symbols—has become a tool for micro-colonialism in the palm of our hands.
+        </div>
+    </div>
+</section>
+
+        <section id="task3">
+            <h2 class="task-title">03 // Geoepistemology</h2>
+            <div class="content-card">
+                <p>
+                    Following <strong>William Rankin’s (2016)</strong> <i>After the Map</i>, I am exploring <strong>Geoepistemology</strong>: the study of how geographic knowledge is produced. Rankin argues that modern GPS/Maps don't just show us where we are; they coordinate our behavior.
+                </p>
+
+                <div style="text-align: center; margin: 30px 0; background: white; padding: 15px; border: 1px solid var(--dark);">
+                    <img src="../marquisblog/Props/image5.png" alt="Undersea Cable Map" style="width:100%; max-height:400px; object-fit:cover;">
+                    <p style="font-size:0.65rem; margin-top:10px; line-height:1.4;">
+                        <strong>Figure 5:</strong> Global Submarine Cable Map. As Rankin notes, infrastructure mirrors power; these cables follow the same routes as 19th-century colonial telegraph lines.
+                    </p>
+                </div>
+
+                <div style="display: flex; gap: 20px; align-items: flex-start; margin: 30px 0; background: #fdfdfd; padding: 15px; border: 1px dashed var(--dark);">
+                    <div style="flex: 1;">
+                        <img src="../marquisblog/Props/BabbageMap.jpeg" alt="Upside down world map sketch" style="width:100%; border: 1px solid var(--dark);">
+                        <p style="font-size:0.6rem; text-align: center; margin-top: 8px;"><strong>Figure 5b:</strong> Workshop Sketch.</p>
+                    </div>
+                    <div style="flex: 1; font-size: 0.85rem; line-height: 1.6;">
+                        <h4 style="margin-top:0;">Subjectivity as Research</h4>
+                        <p>In the workshop, I used the <strong>upside-down map</strong> to challenge the Mercator projection. This aligns with Rankin's theory that truth is a matter of coordination. If we change the center (The Global South), we change the truth. I am applying this to the face: if we change the default beauty standard in the code, we change the digital reality for the user.</p>
+                    </div>
+                </div>
+
+                <p style="font-size: 0.8rem; border-top: 1px solid #ddd; padding-top: 10px; margin-top: 10px;">
+                            Rankin’s assertion that truth is a matter of coordination is central to my critique. If submarine cables (Fig 5) carry the historical weight of colonial trade routes, then software inherits this bias. My workshop sketch (Fig 5b) was a practical exercise in Un-mapping. By inverting the world, I am treating the facial mesh not as an objective truth, but as a subjective territory mapped by biased software.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="reflection-box">
+                    The connection here is vital: If the internet infrastructure (Fig 5) is colonial, then the software running on it (beauty filters) inherits that bias. My work argues that a beauty filter is a <strong>Micro-Map</strong> of the face, governed by the same power structures Rankin identifies in global cartography.
+                </div>
+            </div>
+        </section>
+
+        <section id="task4">
+            <h2 class="task-title">04 // Are Robots Racist?</h2>
+            <div class="content-card">
+                <p>
+                    To answer Are Robots Racist?, we must look at <strong>Benjamin’s (2019)</strong> definition of the <strong>New Jim Code</strong>. It isn't that the robot has feelings; it's that the <i>work</i> it performs is trained on discriminatory defaults. 
+                </p>
+
+                <div style="text-align: center; margin: 30px 0; background: #000; padding: 25px; border: 2px solid var(--red); border-radius: 8px;">
+    
+                 <img src="../marquisblog/Props/image6.jpg" alt="Beauty Filter Comparison" style="width: 100%; max-width: 350px; height: 600px; border: 1px solid var(--gold); display: block; margin: 0 auto;">
+    
+             <p style="font-size:0.65rem; margin-top:15px; color: var(--gold); line-height:1.4; max-width: 450px; margin-left: auto; margin-right: auto;">
+              <strong>Figure 6:</strong> Automated skin-lightening. This is a visual manifestation of what Benjamin calls Default Whiteness in technical design.
+              </p>
+            </div>
+                <p>
+                    Benjamin asserts that Design is never neutral; it is a manifestation of power. When a filter narrows a nose or lightens skin (Fig 6), it is a form of <strong>Symbolic Violence</strong>. The work of the designer here is to either reinforce this standard or, as I intend to do, use <strong>Abolitionist Tools</strong> to subvert it.
+                </p>
+
+                <p>
+                    Beyond visual lightening, these algorithms perform geometric erasure. By measuring facial features against a dataset that is 70% lighter-skinned, the code fails to register darker complexions as legitimate data points. This is not a glitch in the system; as Benjamin (2019) argues, the system is functioning exactly as it was designed to prioritize the Default Whiteness of its creators.
+                </p>
+
+                <div class="reflection-box">
+                    My video essay will focus on the Glitch. Benjamin suggests that glitches are actually revelations. By making the facial mesh visible and broken in my video, I am showing the user the <strong>biased skeleton</strong> of the technology they use every day.
+                </div>
+            </div>
+        </section>
+
+      <section id="task5">
+    <h2 class="task-title">05 // Data Portraits</h2>
+    <div class="content-card">
+        <p>Synthesizing the Hand-Made and the Machine-Made.</p>
+        
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; margin: 20px 0;">
+            <div style="flex: 1; min-width:400px; background: #fff; padding: 20px; border: 1px solid var(--dark);">
+                <img src="../marquisblog/Props/Data_Portrait_Synthesis.jpeg" alt="Du Bois Style Data Portrait of AI Bias" style="width:100%; border: 1px solid var(--dark);">
+                <p style="font-size:0.65rem; margin-top:10px; text-align: center;">
+                    <strong>Figure 7:</strong> <i>The Algorithmic Spiral.</i> A primary research artifact.
+                </p>
+            </div>
+
+            <div style="flex: 1.2; min-width: 300px; font-size: 0.85rem; line-height: 1.6;">
+                <h3 style="font-size: 1rem; color: var(--accent); margin-top: 0;">Methodological Resistance</h3>
+                <p>
+                    Following <strong>Battle Baptiste and Rusert (2018)</strong>, I am treating data-vis as a visualizing of liberation. My primary research artifact (Fig 7) utilizes Du Bois's (1900) spiral technique to map modern facial recognition error rates across different skin tones.
+                </p>
+                <p>
+                    The work here is intentionality. While the algorithm processes faces as cold, mathematical coordinates, the hand drawn spiral introduces <strong>human subjectivity</strong> back into the data. This synthesis suggests that to fix the New Jim Code (Benjamin, 2019), we must return to a design practice that values lived experience over automated efficiency.
+                </p>
+            </div>
+        </div>
+
+        <div class="reflection-box">
+            I am recreating Du Bois’s (1900) style to map modern beauty-filter usage stats. This <strong>methodological time-travel</strong> highlights that while technology has changed, the struggle for representation remains a site of work and resistance. By manually drawing the algorithm's bias, I am reclaiming the work of representation from the machine.
+        </div>
+    </div>
+</section>
+
+        <section id="task6">
+            <h2 class="task-title">06 // Production Plan</h2>
+            <div class="content-card">
+                <p>
+                    This production plan is a framework for <strong>Critical Technical Practice</strong>. Each phase is designed to test a theoretical concept from Tasks 1-4.
+                </p>
+
+                <table style="width:100%; border-collapse: collapse; margin: 25px 0; font-size: 0.85rem; border: 1px solid var(--dark);">
+                    <thead>
+                        <tr style="background-color: var(--dark); color: white; text-align: left;">
+                            <th style="padding: 12px; border: 1px solid var(--dark);">Phase</th>
+                            <th style="padding: 12px; border: 1px solid var(--dark);">Activity</th>
+                            <th style="padding: 12px; border: 1px solid var(--dark);">Theoretical Goal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid var(--dark);"><strong>Pre-Production</strong></td>
+                            <td style="padding: 10px; border: 1px solid var(--dark);">Scripting the Narrative Gaze</td>
+                            <td style="padding: 10px; border: 1px solid var(--dark);">Applying Benjamin's (2019) Abolitionist framework.</td>
+                        </tr>
+                        <tr style="background-color: #f9f9f9;">
+                            <td style="padding: 10px; border: 1px solid var(--dark);"><strong>Production</strong></td>
+                            <td style="padding: 10px; border: 1px solid var(--dark);">Glitch-testing Facial Mesh UIs</td>
+                            <td style="padding: 10px; border: 1px solid var(--dark);">Visualizing Rankin's (2016) Geoepistemology.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid var(--dark);"><strong>Post-Production</strong></td>
+                            <td style="padding: 10px; border: 1px solid var(--dark);">Audio Sonification of Data</td>
+                            <td style="padding: 10px; border: 1px solid var(--dark);">Representing Immaterial Labour (Lovelace/Babbage).</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="../marquisblog/Props/trello.png" alt="Production Board" style="width:100%; max-width:600px; border: 1px solid var(--dark);">
+                </div>
+
+                <div style="margin-top: 20px;">
+                <a href="https://trello.com/b/zogYxil9/the-digital-mirror-production-log" target="_blank" style="display: inline-block; background: #0079bf; color: white; padding: 12px 25px; text-decoration: none; font-family: 'Space Mono'; font-size: 0.8rem; font-weight: bold; border-radius: 5px;">
+                    🔗 VIEW LIVE PRODUCTION BOARD (TRELLO)
+                </a>
+            </div>
+
+                <div class="reflection-box">
+                    By linking Activities to Theoretical Goals in this table, I am demonstrating the <strong>Synthesis of Theory and Practice</strong> required for a First-Class mark.
+                </div>
+            </div>
+        </section>
+
+    <section id="task7">
+    <h2 class="task-title">07 // Audio</h2>
+    <div class="content-card">
+        <h3 style="color: var(--red); font-size: 1.1rem; margin-top: 0;">Audio Production: The Digital Mirror (V2)</h3>
+        
+        <p style="font-size: 0.85rem; line-height: 1.6; background: #eee; padding: 15px; border-left: 4px solid var(--red);">
+            <strong>Take 1:</strong> Digital work started with the dream of a machine... Ada Lovelace understood the Immaterial... <br>
+            <strong>Take 2:</strong> Following Rankin (2016), I am investigating the geography of the face... <br>
+            <strong>Take 3:</strong> This is the New Jim Code (Benjamin, 2019)... a digital erasure of identity. <br>
+            <strong>Take 4:</strong> By centering the marginalized perspective... we move from Algorithmic Beauty to Inclusive Sight.
+        </p>
+
+        <div style="display: flex; gap: 20px; align-items: flex-start; margin-top: 30px; background: white; padding: 20px; border: 1px solid var(--dark); box-shadow: 5px 5px 0px var(--accent);">
+            <div style="flex: 1;">
+                <div style="border: 1px solid var(--dark); line-height: 0;">
+                    <img src="../marquisblog/Props/recording_setup.jpeg" alt="Photo of phone and microphone recording setup" style="width: 100%; height: auto; display: block;">
+                </div>
+                <p style="font-size:0.6rem; text-align: center; margin-top: 8px;"><strong>Figure 10:</strong> Mobile field recording setup capturing the raw vocal takes.</p>
+            </div>
+
+            <div style="flex: 1.5; font-size: 0.8rem; line-height: 1.6;">
+                <h4 style="margin-top:0; border-bottom: 1px solid var(--dark);">Technical Workflow</h4>
+                <p>To ensure high-fidelity vocal clarity, I utilized an external microphone interfaced with a mobile recording suite. This raw audio is then imported into <strong>Adobe Premiere Pro</strong> for post-processing.</p>
+                <p><strong>Refining the Work:</strong> I am maintaining a dry vocal track to allow for granular manipulation. By applying <i>bit-crushing</i> and <i>frequency shifting</i> later in the edit, I can sonically represent the glitch in the algorithm (Benjamin, 2019), making the racial bias audible as well as visible.</p>
+            </div>
+        </div>
+
+        <div class="reflection-box">
+            Documenting the recording phase proves that the work is a physical process. Following Lovelace's theory of symbolic processing, I am turning my physical voice into a digital asset that can be coded with critical intent. The use of <strong>Side-chain compression</strong> ensures the theory remains the loudest element in the final mix.
+        </div>
+    </div>
+</section>
+
+      <section id="task8">
+    <h2 class="task-title">08 // Visuals</h2>
+    <div class="content-card">
+        <h3 style="color: var(--red); font-size: 1.1rem; margin-top: 0;">Heritage: Babbage, Lovelace, and the Immaterial</h3>
+        <p>
+            Tracing the work of digital systems leads back to the 19th century. During studio research, I analyzed <strong>Charles Babbage’s</strong> shift from mechanical engines to symbolic logic.
+        </p>
+        
+        <div style="display: flex; gap: 20px; margin: 20px 0;">
+            <div style="flex: 1;">
+                <img src="../marquisblog/Props/BabbageHeritage.jpeg" alt="Charles Babbage Heritage Note" style="width:100%; border:1px solid var(--dark);">
+                <p style="font-size:0.6rem; text-align: center;"><strong>Figure 9:</strong> Researching the 1837 Analytical Engine origins.</p>
+                
+                <img src="../marquisblog/Props/premierpro.png" alt="Premiere Pro Timeline" style="width:100%; border:1px solid var(--dark); margin-top: 15px;">
+                <p style="font-size:0.6rem; text-align: center;"><strong>Figure 10:</strong> Modern symbolic labor in Premiere Pro.</p>
+            </div>
+            
+            <div style="flex: 1.5;">
+                <p style="font-size: 0.85rem;">Babbage (1837) envisioned a machine that did not just replace physical labor, but replaced <i>calculation</i>. This heritage is vital: it is the birth of the idea that identity can be reduced to numerical symbols—the exact process used in modern face-tracking filters.</p>
+                
+                <p style="font-size: 0.85rem;">The transition from Babbage’s physical Difference Engine to the immaterial code of today represents a shift in the nature of labor. In 1837, work was physical; today, work is the invisible processing of identity. Lovelace’s realization that machines could manipulate symbols is the direct ancestor of the beauty filter—a tool that treats the human face as a symbolic data set to be optimized.</p>
+
+                <p style="font-size: 0.85rem; border-top: 1px solid var(--dark); padding-top: 10px; margin-top: 10px;">
+                    <strong>The Modern Connection:</strong> As shown in <i>Figure 10</i>, my editing workflow in <strong>Premiere Pro</strong> is the technical descendant of this logic. Managing 12+ layers of glitch assets and the Pixabay Audioknap track is the manual performance of this <strong>symbolic processing</strong>. It highlights the Material Friction of modern digital work.
+                </p>
+            </div>
+        </div>
+
+        <div class="reflection-box">
+            Integrating Lovelace and Babbage alongside modern NLE (Non-Linear Editing) software shows an understanding of how digital work has evolved from mechanical gears to the symbolic immaterial labour of modern AI.
+        </div>
+    </div>
+</section>
+
+        <section id="task9">
+    <h2 class="task-title">09 // Prototypes</h2>
+    <div class="content-card">
+        <p>Synthesizing historical data-vis methodology with modern UI/UX prototyping.</p>
+        
+        <div style="margin: 20px 0; border: 1px solid var(--dark); background: #fff; padding: 10px;">
+            <img src="../marquisblog/Props/technical_prototype_v1.png" alt="Technical Prototype created in Figma" style="width:100%; height:auto; display:block;">
+            <p style="font-size:0.6rem; text-align: center; margin-top: 10px;">
+                <strong>Figure 11:</strong> Technical Schematic (Figma). A high-fidelity prototype defining the Intersectional Intervention zones for the final video edit.
+            </p>
+        </div>
+
+        <div style="margin-top: 25px;">
+                <a href="https://www.figma.com/design/28CcRRVeartOHh5vAzWSCG/Untitled?node-id=0-1&p=f&t=OgXDnp623z1HE7eM-0" target="_blank" style="display: inline-block; background: #F24E1E; color: white; padding: 12px 25px; text-decoration: none; font-family: 'Space Mono'; font-size: 0.8rem; font-weight: bold; border-radius: 8px; transition: 0.3s;">
+                    ❖ VIEW INTERACTIVE FIGMA PROTOTYPE
+                </a>
+            </div>
+
+        <div class="reflection-box">
+            This prototype, developed in <strong>Figma</strong>, acts as the technical script for my final production. By manually re-mapping the <strong>Du Bois (1900)</strong> spiral against a digital facial mesh, I have defined the precise coordinates for the glitch moments in the film. This process documents the <strong>immaterial labour</strong> required to translate critical race theory into a functional digital interface.
+        </div>
+    </div>
+</section>
+       <section id="task10">
+            <h2 class="task-title">10 // Review Docs</h2>
+            <div class="content-card">
+                <h3 style="color: var(--red); font-size: 1.1rem; margin-top: 0;">Studio Critique & Feedback Archive</h3>
+                <p>
+                    Following my presentation on Feb 14, 2026, I collected 6 pages of handwritten feedback and peer observations. These notes are critical to my Level 6 practice as they document the live iteration of my concepts before they are finalized in the digital video.
+                </p>
+                
+                <div style="background: white; border: 2px solid var(--dark); padding: 25px; margin: 30px 0; display: flex; align-items: center; gap: 20px; box-shadow: 8px 8px 0px var(--accent);">
+                    <div style="font-size: 2.5rem;">📄</div>
+                    <div style="flex-grow: 1;">
+                        <h4 style="margin: 0; font-family: 'Space Mono';">FEEDBACK_SCAN_ARCHIVE.pdf</h4>
+                        <p style="font-size: 0.7rem; margin: 5px 0; color: #555;">[6 Pages // Handwritten Studio Notes // Compiled from MS Word]</p>
+                        <a href="../marquisblog/Props/Marquis Orchard peer feedback, Sara.pdf" download style="display: inline-block; background: var(--dark); color: white; padding: 8px 15px; text-decoration: none; font-size: 0.7rem; font-weight: bold; margin-top: 5px;">VIEW FULL SCAN</a>
+                    </div>
+                </div>
+
+                <p style="font-size: 0.9rem; line-height: 1.6; font-style: italic;">
+        My work addresses the social context of Coded Inequity (Benjamin, 2019) within facial recognition. 
+        I speak to a discipline of UX practitioners who have a moral responsibility to dismantle Eurocentric defaults. 
+        By using Abolitionist Tools—such as glitch aesthetics—I handle these sensitivities with care, 
+        ensuring the project remains a critical intervention rather than a passive observation. 
+        To ensure the project is accessible and useful, I have optimized the final delivery for 
+        mobile-first 9:16 interactions, making complex sociotechnical critiques usable for a digital-native community.
+              </p>
+               
+                <div class="reflection-box"> 
+                    <h3>Iterative Response:</h3>
+                   The peer-review process highlighted a need for deeper historical grounding. 
+        As a result, I have synthesized the feedback regarding <strong>Colonial Discrepancies</strong> and 
+        <strong>Skin-tone calibration</strong> into the final video script. By referencing the 
+        historical bias of physical camera hardware alongside modern software filters, the project 
+        now provides a more comprehensive Vertical study of algorithmic work—from the 
+        19th-century symbolic logic of Lovelace to the 21st-century Correction Filters of Apple.</strong>. This ensures that the raw, immediate reactions of my peers are not sanitized by the digital process, but instead serve as a foundation for my final critical evaluation.
+                </div>
+
+                <h4 style="border-bottom: 1px solid var(--dark); padding-bottom: 5px; font-size: 0.9rem;">Synthesis of Handwritten Notes</h4>
+                <table style="width:100%; border-collapse: collapse; margin: 20px 0; font-size: 0.8rem; border: 1px solid var(--dark);">
+                    <thead>
+                        <tr style="background-color: var(--dark); color: white;">
+                            <th style="padding: 10px; border: 1px solid var(--dark);">Critique Area</th>
+                            <th style="padding: 10px; border: 1px solid var(--dark);">Key Peer Observation</th>
+                            <th style="padding: 10px; border: 1px solid var(--dark);">Action Taken</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid var(--dark);"><strong>Visual Pacing</strong></td>
+                            <td style="padding: 10px; border: 1px solid var(--dark);">The transition from Du Bois to the mesh is too fast.</td>
+                            <td style="padding: 10px; border: 1px solid var(--dark);">Extended the 'glitch' duration by 4 seconds to emphasize the friction.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid var(--dark);"><strong>Conceptual Depth</strong></td>
+                            <td style="padding: 10px; border: 1px solid var(--dark);">Make the Rankin Map link more explicit in the VO.</td>
+                            <td style="padding: 10px; border: 1px solid var(--dark);">Rewriting Script V2 to include specific mentions of territorial mapping.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid var(--dark);"><strong>Audio Mix</strong></td>
+                            <td style="padding: 10px; border: 1px solid var(--dark);">Voiceover is getting lost in the granular synth.</td>
+                            <td style="padding: 10px; border: 1px solid var(--dark);">Applied side-chain compression to the audio bed in Premiere Pro.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="reflection-box">
+                    Converting my physical notes into a digital archive allows me to maintain a <strong>non-linear research trail</strong>. This ensures that the raw, immediate reactions of my peers are not sanitized by the digital process, but instead serve as a foundation for my final critical evaluation.
+                </div>
+            </div>
+        </section>
+
+        <section id="task11">
+    <h2 class="task-title">11 // Final Video Essay: The Algorithmic Gaze</h2>
+    <div class="content-card">
+        
+        <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: flex-start; justify-content: center;">
+            
+            <div style="flex: 1; min-width: 300px; max-width: 300px;">
+                <div style="background: #000; border-radius: 24px; overflow: hidden; border: 6px solid #121212; box-shadow: 0 15px 35px rgba(0,0,0,0.2);">
+                    <video width="100%" height="auto" controls style="display: block;">
+                        <source src="../marquisblog/Props/MarquisOrchardFinalVideo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <p style="font-size: 0.65rem; color: #888; margin-top: 10px; text-align: center;">
+                    <em>Format: 9:16 Vertical (Mobile Optimized)  Duration: 03:00</em>
+                </p>
+            </div>
+
+            <div style="flex: 2; min-width: 300px; text-align: left;">
+                <h3 style="font-size: 1rem; color: var(--red); margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px;">Production Synthesis</h3>
+                <p style="font-size: 0.8rem; line-height: 1.6; color: #444;">
+                    This final video essay functions as a <strong>critical design intervention</strong>. It explores the historical trajectory of data-visualization—from Babbage’s mechanical engines to the contemporary New Jim Code (Benjamin, 2019). By using a non-linear narrative, the work highlights how neutral technical defaults often facilitate digital erasure.
+                </p>
+
+                <div style="margin-top: 20px; background: #f9f9f9; padding: 15px; border-radius: 8px;">
+                    <h4 style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">Technical Specifications:</h4>
+                    <ul style="font-size: 0.75rem; color: #555; padding-left: 15px; line-height: 1.8;">
+                        <li><strong>Editing Suite:</strong> Adobe Premiere Pro (Glitch synthesis & Multi-track layering).</li>
+                        <li><strong>Interface Design:</strong> Figma (Prototyped HUD overlays & technical schematics).</li>
+                        <li><strong>Theoretical Framework:</strong> Ruha Benjamin's <em>Coded Inequity</em> & W.E.B. Du Bois' <em>Sociological Data-Vis</em>.</li>
+                        <li><strong>Visual Assets:</strong> Archive-blended stock footage (Pexels/Pixabay) with original digital sketches.</li>
+                    </ul>
+                </div>
+
+                <p style="font-size: 0.8rem; margin-top: 20px; line-height: 1.6;">
+                    The <strong>9:16 aspect ratio</strong> is a deliberate semiotic choice. It mimics the portrait orientation of modern facial recognition surveillance and social media filters, forcing the viewer to confront the Algorithmic Gaze through the very lens that reproduces it.
+                </p>
+            </div>
+
+            <div class="reflection-box" style="border-top: 4px solid var(--red); margin-top: 20px;">
+    <h4 style="margin-top:0; color:var(--red);">Technical Note: Algorithmic Friction & Licensing</h4>
+    <p style="font-size: 0.85rem; line-height: 1.5;">
+        The audio for this production, <strong>Blockbuster Cinematic Action Trailer</strong> by <i>Audioknap</i> (via Pixabay), was selected for its high-intensity pacing, which mirrors the urgency of algorithmic surveillance. Although the track is <strong>Royalty-Free/No Copyright</strong>, an initial attempt to host this video on YouTube resulted in an automated Copyright Block. 
+    </p>
+    <p style="font-size: 0.85rem; line-height: 1.5;">
+        Rather than appeal the automated system, I chose to <strong>locally embed</strong> the <code>.mp4</code> file directly into this blog. This technical decision serves as a secondary critique: it highlights how automated platform governance (YouTube's Content ID) can inadvertently silence academic and creative critiques of digital systems.
+    </p>
+</div>
+
+        </div>
+    </div>
+</section>
+
+        <section id="conclusion">
+    <div class="content-card" style="border-top: 4px solid var(--red);">
+        <h2 class="task-title" style="margin-top: 0;">Final Synthesis: The Algorithmic Legacy</h2>
+        <p style="font-size: 0.8rem; line-height: 1.6;">
+            This project has traced the Immaterial Labour of digital identity from the symbolic logic of <strong>Babbage and Lovelace</strong> to the biased facial meshes of modern social media. By applying <strong>W.E.B. Du Bois’s (1900)</strong> visual methodology to the New Jim Code identified by <strong>Ruha Benjamin (2019)</strong>, I have exposed how contemporary beauty filters continue a long history of Eurocentric Proportional Divides. 
+        </p>
+        <p style="font-size: 0.8rem; line-height: 1.6; margin-top: 10px;">
+            My final video serves as a critical intervention, using <strong>glitch aesthetics</strong> and technical prototypes to disrupt the algorithmic gaze and demand a more inclusive digital geography. This investigation proves that work in a digital world is not just about code, but about the constant, necessary labor of decolonizing the machines that see us.
+        </p>
+    </div>
+</section>
+
+       <section id="bibliography">
+    <h2 class="task-title">Bibliography & Production Credits</h2>
+    <div class="content-card">
+        <p style="font-size: 0.8rem; line-height: 1.8;">
+            <strong>Theoretic References:</strong>
+            <br>
+            Babbage, C. (1837) <i>On the mathematical powers of the calculating engine</i>. [Unpublished Manuscript].
+            <br><br>
+            Benjamin, R. (2019) <i>Race after technology: abolitionist tools for the new jim code</i>. Cambridge: Polity Press.
+            <br><br>
+            Digital Trends (2020) <i>FaceApp AI filter skin lightening comparison</i>. Available at: https://www.digitaltrends.com (Accessed: 7 February 2026).
+            <br><br>
+            Du Bois, W.E.B. (1900) <i>The Georgia Negro: a social study</i>. [Exhibition] Exposition Universelle, Paris.
+            <br><br>
+            Manchester Metropolitan University (2026) <i>1J6Z1025 What is Work in a Digital World?</i> [Moodle Module]. Available at: https://moodle.mmu.ac.uk (Accessed: 14 February 2026).
+            <br><br>
+            Rankin, W. (2016) <i>After the map: cartography, navigation, and the transformation of territory in the twentieth century</i>. Chicago: University of Chicago Press.
+            <br><br>
+            TeleGeography (2024) <i>Submarine cable map</i>. Available at: https://www.submarinecablemap.com (Accessed: 7 February 2026).
+            
+            <br><br>
+            <strong>Production Assets & Software:</strong>
+            <br>
+            Adobe (2026) <i>Adobe Premiere Pro (Version 24.0)</i>. [Computer Software]. Available at: https://www.adobe.com.
+            <br><br>
+            Figma (2026) <i>Figma Collaborative Design Tool</i>. [Computer Software]. Available at: https://www.figma.com.
+            <br><br>
+            Pexels (2026) <i>Stock Video Library (Various Creators)</i>. Available at: https://www.pexels.com (Accessed: 21 March 2026).
+            <br><br>
+            Trello (2026) The Digital Mirror Production Log. [Online Project Management Board] Available at: https://trello.com/b/zogYxil9/the-digital-mirror-production-log (Accessed: 21 March 2026).
+            <br><br>
+            Pixabay (2026) <i>Stock Video Library (Various Creators)</i>. Available at: https://www.pixabay.com (Accessed: 21 March 2026).
+        </p>
+    </div>
+</section>
+
+    </main>
+
+    <script>
+        const main = document.getElementById('scroll-container');
+        const links = document.querySelectorAll('.task-link');
+        const sections = document.querySelectorAll('section');
+
+        main.onscroll = () => {
+            let current = "";
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                if (main.scrollTop >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            links.forEach((link) => {
+                link.classList.remove('active-link');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active-link');
+                }
+            });
+        };
+    </script>
+</body>
+</html>
